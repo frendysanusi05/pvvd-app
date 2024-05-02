@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pvvd_app/screens/profile_screen_edit.dart';
 import 'package:pvvd_app/utils/constants.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -20,13 +21,15 @@ class ProfileScreen extends StatelessWidget {
             actions: [
               IconButton(
                 color: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, ProfileScreenEdit.id);
+                },
                 icon: const Icon(Icons.edit),
               ),
             ]),
         body: SafeArea(
           child: SizedBox(
-          height: 1000,
+          height: MediaQuery.of(context).size.height,
             child: SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
@@ -44,12 +47,12 @@ class ProfileScreen extends StatelessWidget {
                           ),
                           const Center(
                             child: SizedBox(
-                              height: 50,
+                              height: 65,
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text('Nama Lengkap'),
+                                  Text('Hi, Nama', style: TextStyle(fontSize: 28)),
                                   Text('Nomor Telepon'),
                                 ],
                               ),
@@ -66,31 +69,64 @@ class ProfileScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Tanggal Lahir'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Nama Lengkap'),
+                          ),
                           Text(''),
                           Divider(),
-                          Text('Golongan Darah'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Tanggal Lahir'),
+                          ),
                           Text(''),
                           Divider(),
-                          Text('Alamat E-mail'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Golongan Darah'),
+                          ),
                           Text(''),
                           Divider(),
-                          Text('Alamat Domisili'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Alamat E-mail'),
+                          ),
                           Text(''),
                           Divider(),
-                          Text('Kabupaten/Kota'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Alamat Domisili'),
+                          ),
                           Text(''),
                           Divider(),
-                          Text('Provinsi'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Kabupaten/Kota'),
+                          ),
                           Text(''),
                           Divider(),
-                          Text('Asal Instansi'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Provinsi'),
+                          ),
                           Text(''),
                           Divider(),
-                          Text('Bidang/Jurusan'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Asal Instansi'),
+                          ),
                           Text(''),
                           Divider(),
-                          Text('Jenjang Pendidikan'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Bidang/Jurusan'),
+                          ),
+                          Text(''),
+                          Divider(),
+                          Padding(
+                            padding: EdgeInsets.only(top: 14, bottom: 14),
+                            child: Text('Jenjang Pendidikan'),
+                          ),
                           Text(''),
                         ],
                       ),

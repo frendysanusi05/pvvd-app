@@ -3,6 +3,7 @@ import 'package:pvvd_app/screens/register_screen.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:pvvd_app/screens/profile_screen.dart';
+import 'package:pvvd_app/screens/profile_screen_edit.dart';
 import 'package:pvvd_app/screens/login_screen.dart';
 import 'package:pvvd_app/screens/welcome_screen.dart';
 
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => const LoginScreen(),
         RegisterScreen.id: (context) => const RegisterScreen(),
         ProfileScreen.id: (context) => const ProfileScreen(),
+        ProfileScreenEdit.id: (context) => const ProfileScreenEdit(),
       },
     );
   }
