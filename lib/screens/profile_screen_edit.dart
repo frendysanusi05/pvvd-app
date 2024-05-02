@@ -36,25 +36,38 @@ class ProfileScreenEdit extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 70,
+                    height: 85,
+                    width: MediaQuery.of(context).size.width*0.7,
                     child:
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Image.asset(
                           'assets/images/profile-placeholder.png',
-                          width: 70,
-                          height: 70,
+                          width: 75,
+                          height: 75,
                         ),
-                        const Center(
+                        Center(
                           child: SizedBox(
-                            height: 65,
+                            height: 85,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Text('Hi, Nama', style: TextStyle(fontSize: 28)),
-                                Text('Nomor Telepon'),
+                                const Text('Hi, Nama', style: TextStyle(fontSize: 26)),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text('Nomor Telepon'),
+                                    IconButton(
+                                      color: Colors.white,
+                                      onPressed: () {},
+                                      iconSize: 20,
+                                      icon: const Icon(Icons.settings),
+                                    ),
+                                  ],
+                                ),
                               ],
                             ),
                           ),

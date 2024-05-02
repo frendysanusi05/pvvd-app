@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pvvd_app/screens/profile_screen_edit.dart';
 import 'package:pvvd_app/utils/constants.dart';
@@ -36,24 +37,29 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(
-                      height: 70,
+                      height: 85,
+                      width: MediaQuery.of(context).size.width*0.7,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Image.asset(
                             'assets/images/profile-placeholder.png',
-                            width: 70,
-                            height: 70,
+                            width: 75,
+                            height: 75,
                           ),
                           const Center(
                             child: SizedBox(
-                              height: 65,
+                              height: 85,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Text('Hi, Nama', style: TextStyle(fontSize: 28)),
-                                  Text('Nomor Telepon'),
+                                  Text('Hi, Nama', style: TextStyle(fontSize: 26)),
+                                  Padding(
+                                    padding:EdgeInsets.only(top: 14, bottom: 14, right: 48),
+                                    child: Text('Nomor Telepon'),
+                                  ),
                                 ],
                               ),
                             ),
