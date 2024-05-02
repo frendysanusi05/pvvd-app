@@ -28,14 +28,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
         textTheme: const TextTheme(
-            bodyText1: TextStyle(),
-            bodyText2: TextStyle()
+            bodyLarge: TextStyle(),
+            bodyMedium: TextStyle()
           ).apply(
           bodyColor: Colors.white,
           displayColor: Colors.white,
         ),
       ),
-      initialRoute: WelcomeScreen.id,
+      initialRoute: ProfileScreen.id,
       routes: {
         WelcomeScreen.id: (context) => const WelcomeScreen(),
         LoginScreen.id: (context) => const LoginScreen(),
